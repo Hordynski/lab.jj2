@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model Lab.JJ2.Models.Product
+
+<h2>Index</h2>
+
+<div class="jumbotron, text-center, text-danger">
+
+    <p class="text-success">Hey everyone! Welcome to my prodcuts page!</p>
+
+    <p class="text-success">The time is @DateTime.Now.TimeOfDay</p>
+
+</div>
+
+@using (Html.BeginForm("Edit", "Product", FormMethod.Post))
+{
+<body class="btn-group-justified">
+    <div class="form-group, text-primary">
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name)
+
+    </div>
+
+    <div class="form-group, text-primary">
+        @Html.LabelFor(x => x.Description)
+        @Html.TextBoxFor(x => x.Description)
+
+    </div>
+
+    <div class="form-group, text-primary">
+        @Html.LabelFor(x => x.Category)
+        @Html.TextBoxFor(x => x.Category)
+
+    </div>
+
+    <div class="form-group, text-primary">
+        @Html.LabelFor(x => x.Price)
+        @Html.TextBoxFor(x => x.Price)
+
+    </div>
+
+    <button type="submit" class="btn-success, text-success">Submit</button>
+</body>
+}
